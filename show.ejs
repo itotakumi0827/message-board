@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>メッセージ</h1>
+    <%= message.content %> 
+
+    <br>
+    <h1>返信する</h1>
+   <form action="/replies/<%= message.id %>" method="post">
+        <input type="text" name="replyContent">
+        <input type="submit"value ="返信">
+   </form>
+   <% message.replies.map((reply) => { %>
+    <li><%= reply.content %></li>
+  <% }) %>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>掲示板サイト</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>メッセージボード</h1>
+    <a href="/messages/new">投稿する</a>
+    <br>
+    <% messages.map((message) =>{ %>
+      <li><%= message.content %></li>
+      <a href="/messages/<%= message.id %>/edit">編集</a>
+      <a href="/messages/<%= message.id %>">詳細</a>
+      <form action="/messages/<%= message.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="削除">
+      </form>
+    <% }) %>
+  </body>
+</html>

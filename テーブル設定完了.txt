@@ -1,0 +1,10 @@
+テーブル設定完了
+dbからデータ抽出
+messageのcrud完成
+詳細ページ表示
+
+   <!-- <form action="/replies" method="post">
+        <input type="hidden" name="_method" value="put"> 
+        <input type="text" name="replyContent" value= "<%= reply.content %>">
+        <input type="submit"value ="返信">
+    </form> -->
